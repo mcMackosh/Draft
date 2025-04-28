@@ -1,0 +1,13 @@
+# Backend (ASP.NET)
+backend/bin/
+backend/obj/
+backend/**/*.user
+backend/**/*.suo
+
+# Frontend (React)
+frontend/node_modules/
+frontend/build/
+
+# Загальні
+.env
+*.log
