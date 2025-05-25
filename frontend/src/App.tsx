@@ -44,7 +44,7 @@ const App = () => {
 
   return (
     <Box display="flex">
-      {user.user ?
+      {user.user?.isVerified ?
         <>
         <SideBar/>
         <Routes>

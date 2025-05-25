@@ -24,7 +24,6 @@ namespace Draft.Controllers
         }
 
         [HttpPost]
-        [ProjectAuthorization(RoleEnum.Admin)]
         public async Task<IActionResult> CreateProject([FromBody] CreateProjectDto project)
         {
             var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");

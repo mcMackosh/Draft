@@ -107,8 +107,6 @@ namespace Draft.Services
                 .Where(p => projectIds.Contains(p.Id))
                 .ToListAsync();
 
-            if (!projects.Any())
-                throw new NotFoundException("No projects found for this user.");
 
             return projects.Select(p => new ProjectDto
             {

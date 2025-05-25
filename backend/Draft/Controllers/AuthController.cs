@@ -10,6 +10,17 @@ using UnauthorizedAccessException = Draft.Exrption.UnauthorizedAccessException;
 
 namespace Draft.Controllers
 {
+
+    [ApiController]
+    [Route("api/[controller]")]
+    public class TestController : ControllerBase
+    {
+        [HttpGet("test")]
+        public IActionResult GetTest()
+        {
+            return Ok("Hello World!");
+        }
+    }
     [ApiController]
     [Route("api/auth")]
     public class AuthController : ControllerBase

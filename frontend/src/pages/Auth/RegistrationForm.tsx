@@ -25,8 +25,8 @@ const RegistrationForm = () => {
   const [password, setPassword] = useState('');
   const [verificationCode, setVerificationCode] = useState('');
 
-  const user = useSelector((state: RootState) => state.user.user); // Отримуємо користувача з Redux
-  const isUserRegisteredButNotVerified = user && !user.isVerified; // Перевіряємо статус верифікації
+  const user = useSelector((state: RootState) => state.user.user);
+  const isUserRegisteredButNotVerified = (user && !user.isVerified) || false;
 
   const [register, { isLoading: isRegistering }] = useRegistrationMutation();
   const [verify, { isLoading: isVerifying }] = useVerifyMutation();
@@ -72,6 +72,8 @@ const RegistrationForm = () => {
       });
     }
   };
+
+  console.log(isUserRegisteredButNotVerified);
 
   return (
     <Container
