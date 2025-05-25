@@ -5,10 +5,11 @@ yarn-debug.log*
 yarn-error.log*
 dist/
 build/
-.env
+
+# Environment files
+*.env*
 
 # React
-*.env*
 .cache/
 .vite/
 .next/
@@ -25,15 +26,12 @@ coverage/
 *.suo
 *.userosscache
 *.sln.docstates
-obj
-bin
 
 # Build results
 [Dd]ebug/
 [Rr]elease/
 x64/
 x86/
-build/
 [Bb]in/
 [Oo]bj/
 
